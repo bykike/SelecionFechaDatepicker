@@ -31,7 +31,7 @@
       }
   }
       
-  // Comprueba que exista la fecha suministrada
+  // Para validar si la fecha introducida es real, es decir, que corresponde al calendario. 
 
   function existeFecha(fecha){
       
@@ -46,16 +46,8 @@
         return true;
   }
    
-  function existeFecha2 (fecha) {
-      
-          var fechaf = fecha.split("/");
-          var d = fechaf[0];
-          var m = fechaf[1];
-          var y = fechaf[2];
-          return m > 0 && m < 13 && y > 0 && y < 32768 && d > 0 && d <= (new Date(y, m, 0)).getDate();
-  }
 
-
+  // Validar si la fecha introducida es anterior o menor a la actual.
   function validarFechaMenorActual(date){
       
         var x=new Date();
@@ -69,6 +61,8 @@
           return true;
   }
 
+  // Utilizo las dos funciones anteriores para comprobar que la fecha introducida es correcta
+      
   function comprobar() {
     
     var fecha = document.getElementById('fechaX').value;
